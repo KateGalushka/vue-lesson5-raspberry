@@ -1,25 +1,26 @@
 <template>
-  
-</template>
+	<product-panel :productCardList="raspberryList"/>
+ </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { raspberryList } from './constants/2_data_raspberry.js'
+import ProductPanel from './components/ProductPanel.vue'
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
+	ProductPanel
+  },
+
+  data() {
+	return {
+		raspberryList
+	}
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
